@@ -5,18 +5,20 @@
 # Created by: PyQt5 UI code generator 5.9.1
 #
 # WARNING! All changes made in this file will be lost!
-import FarmBot
 from FarmBot import Bot
 import webbrowser
 import sys
-import shutil
-import os
-import subprocess
-from time import sleep
+#import shutil
+#import os
+#import subprocess
+#from time import sleep
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+#import coords
 
-from PyQt5 import QtCore, QtGui
-from os import _exit, startfile
+#from PyQt5 import QtCore, QtGui
+from os import _exit
 from psutil import process_iter
 import threading
 
@@ -117,7 +119,7 @@ class Ui_Dialog(object):
         self.joindiscord = QtWidgets.QPushButton(self.tab_2)
         self.joindiscord.setGeometry(QtCore.QRect(70, 260, 331, 61))
         self.joindiscord.setObjectName("joindiscord")
-        self.joindiscord.clicked.connect(lambda: webbrowser.open("https://discord.gg/vQxmu8S"))        
+        self.joindiscord.clicked.connect(lambda: webbrowser.open(""))        
         self.label_3 = QtWidgets.QLabel(self.tab_2)
         self.label_3.setGeometry(QtCore.QRect(10, 10, 441, 231))
         self.label_3.setWordWrap(True)
@@ -147,7 +149,7 @@ class Ui_Dialog(object):
             if proc.name() == self.PROCNAME:
                 proc.kill()
                 _exit(1)
-        QCoreApplication.instance().quit
+            QCoreApplication.instance().quit
     
     
     def set_res(self, res):
@@ -164,7 +166,7 @@ class Ui_Dialog(object):
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "PUBG BP Farmer"))
+        Dialog.setWindowTitle(_translate("Dialog", "PUBG BP Farmer forked by peleon02"))
         self.Start.setText(_translate("Dialog", "Start!"))
         self.stop.setText(_translate("Dialog", "Stop"))
         self.teneighty.setText(_translate("Dialog", "1920x1080p"))
@@ -186,13 +188,13 @@ class Ui_Dialog(object):
 "<li style=\" font-family:\'-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol\'; font-size:10pt; font-weight:400; color:#24292e;\" style=\" margin-top:16px; margin-bottom:16px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">if its crashing, make sure to close the game before starting the bot, the bot will open the game for you!</li></ul>\n"
 "<p style=\" margin-top:0px; margin-bottom:16px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol\'; font-size:10pt; font-weight:400; color:#24292e;\">if you need more assistance ping me in the discord</span></p></body></html>"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Dialog", "Help"))
-        self.label_4.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:9pt;\">* Auto Jumps at random point</span></p><p><span style=\" font-size:9pt;\">*Auto runs </span></p><p><span style=\" font-size:9pt;\">* Lays down and prevents drowning</span></p><p><span style=\" font-size:9pt;\">*Exit game when it passes AFK Timer</span></p><p>Future: </p><p><span style=\" font-size:9pt;\">Auto fighting afk players so you can leave earlier(I have an idea of how to do it but it will be more long term)</span></p><p><span style=\" font-size:9pt;\">Selecting the server </span></p><p><span style=\" font-size:9pt;\">Selecting the random jump time</span></p><p><br/><span style=\" font-size:9pt;\">Getting the quit button to work again(lol I swear it used to work)</span></p><p><span style=\" font-size:9pt;\">Donate:</span></p><p><span style=\" font-size:9pt;\">Bitcoin address : 16mCfoqBuvymgVVktCAPp1W6HNL3zoMiFq</span></p></body></html>"))
+        self.label_4.setText(_translate("Dialog", "<html><head/><body> <p> Edited to work in last update by peleon02 for more can follow me @peleon02<\p><p><span style=\" font-size:9pt;\">* Auto Jumps at random point</span></p><p><span style=\" font-size:9pt;\">*Auto runs </span></p><p><span style=\" font-size:9pt;\">* Lays down and prevents drowning</span></p><p><span style=\" font-size:9pt;\">*Exit game when it passes AFK Timer</span></p><p>Future: </p><p><span style=\" font-size:9pt;\">Auto fighting afk players so you can leave earlier(I have an idea of how to do it but it will be more long term)</span></p><p><span style=\" font-size:9pt;\">Selecting the server </span></p><p><span style=\" font-size:9pt;\">Selecting the random jump time</span></p><p><br/><span style=\" font-size:9pt;\">Getting the quit button to work again(lol I swear it used to work)</span></p><p><span style=\" font-size:9pt;\">Donate:</span></p><p><span style=\" font-size:9pt;\">Bitcoin address : 16mCfoqBuvymgVVktCAPp1W6HNL3zoMiFq</span></p></body></html>"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("Dialog", "Features"))
 
 #import pubgimage_rc
 
 if __name__ == "__main__":
-    import sys
+    #import sys
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
     ui = Ui_Dialog()
